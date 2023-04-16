@@ -47,6 +47,24 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": 1
+    },
+    {
+      "name": "Mrs. Potato Head",
+      "image": "https://static.wikia.nocookie.net/pixar/images/a/a7/BEST_MRS.POTATO_HEAD_EVER.png/revision/latest?cb=20210210225058",
+      "likes": 0,
+      "id": 9
+    },
+    {
+      "name": "Lots-o'-Huggin' Bear",
+      "image": "https://static.wikia.nocookie.net/disney/images/3/36/Profile_-_Lotso_Huggin_Bear.jpeg/revision/latest?",
+      "likes": 0,
+      "id": 10
+    },
+    {
+      "name": "Forky",
+      "image": "https://upload.wikimedia.org/wikipedia/en/6/6e/Forky_waving.png",
+      "likes": 0,
+      "id": 11
     }
   ]
 }
