@@ -27,6 +27,30 @@ document.addEventListener("DOMContentLoaded", () => {
       <button class="like-btn" id="${toy.id}">Like ❤️</button>`
     toyCollection.appendChild(newToy)
     })
+
+    const toyButtons = document.getElementsByClassName("like-btn");
+
+    for(btn of toyButtons){ //adds event listeners to each toy's card
+      btn.addEventListener("click", (e) => {
+        const toyID = e.target.id;
+        let newLikes = parseInt(e.target.parentNode.querySelector("p").textContent) + 1;
+        
+        fetch(`http://localhost:3000/toys/${toyID}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: JSON.stringify({
+            "likes": newLikes
+          })
+        })
+        .then(resp => resp.json())
+        .then(function(data){
+          e.target.parentNode.querySelector("p").textContent = data.likes;
+        })
+      })
+    }
   })
   //we need to grab the input from the form
   const form = document.getElementsByClassName("add-toy-form")[0];
